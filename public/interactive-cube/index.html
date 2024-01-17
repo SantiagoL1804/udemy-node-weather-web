@@ -1,0 +1,414 @@
+<html lang="en">
+  <script src="chrome-extension://cbllkmdbdpmfbodkeljlikmgfjpobbdi/contentPageRuntimeScript.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive cube</title>
+    <script type="module" crossorigin="" src="app/index.698c3c61.js"></script>
+    <link rel="modulepreload" href="app/vendor.63c1c579.js" />
+
+    <link rel="stylesheet" href="style/index.44e8813c.css" />
+  </head>
+
+  <body cz-shortcut-listen="true">
+    <div id="app">
+      <div class="container">
+        <img id="pointer" src="images/pointer2.png" alt="" draggable="false" />
+        <div class="swiper-slicer swiper-ratio-slicer">
+          <div
+            class="swiper swiper-cube swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress"
+            style="cursor: grab"
+          >
+            <!-- invisible image to determine size -->
+            <img class="swiper-slicer-size" src="images/1.jpg" />
+            <div
+              class="swiper-wrapper"
+              style="
+                transform-origin: 50% 50% -240px;
+                transform: translate3d(0px, 0px, 0px) rotateX(0deg)
+                  rotateY(0deg);
+                --swiper-cube-translate-z: 0px;
+                transition-duration: 0ms;
+                transition-delay: 0ms;
+              "
+            >
+              <div
+                class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active"
+                style="
+                  background-image: url('images/1.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(0deg)
+                    translate3d(0px, 0px, 0px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 0"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+              <div
+                class="swiper-slide swiper-slide-next"
+                style="
+                  background-image: url('images/2.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(90deg)
+                    translate3d(0px, 0px, 0px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 1"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="
+                  background-image: url('images/3.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(180deg)
+                    translate3d(480px, 0px, 480px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 1"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="
+                  background-image: url('images/4.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(270deg)
+                    translate3d(-480px, 0px, 1440px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 1"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper swiper-cube swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress"
+            style="cursor: grab"
+          >
+            <div
+              class="swiper-wrapper"
+              style="
+                transform-origin: 50% 50% -240px;
+                transform: translate3d(0px, 0px, 0px) rotateX(0deg)
+                  rotateY(0deg);
+                --swiper-cube-translate-z: 0px;
+                transition-duration: 0ms;
+                transition-delay: 0ms;
+              "
+            >
+              <div
+                class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active"
+                style="
+                  background-image: url('images/1.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(0deg)
+                    translate3d(0px, 0px, 0px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 0"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+              <div
+                class="swiper-slide swiper-slide-next"
+                style="
+                  background-image: url('images/2.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(90deg)
+                    translate3d(0px, 0px, 0px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 1"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="
+                  background-image: url('images/3.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(180deg)
+                    translate3d(480px, 0px, 480px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 1"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="
+                  background-image: url('images/4.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(270deg)
+                    translate3d(-480px, 0px, 1440px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 1"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper swiper-cube swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress"
+            style="cursor: grab"
+          >
+            <div
+              class="swiper-wrapper"
+              style="
+                transform-origin: 50% 50% -240px;
+                transform: translate3d(0px, 0px, 0px) rotateX(0deg)
+                  rotateY(0deg);
+                --swiper-cube-translate-z: 0px;
+                transition-duration: 0ms;
+                transition-delay: 0ms;
+              "
+            >
+              <div
+                class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active"
+                style="
+                  background-image: url('images/1.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(0deg)
+                    translate3d(0px, 0px, 0px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 0"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+              <div
+                class="swiper-slide swiper-slide-next"
+                style="
+                  background-image: url('images/2.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(90deg)
+                    translate3d(0px, 0px, 0px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 1"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="
+                  background-image: url('images/3.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(180deg)
+                    translate3d(480px, 0px, 480px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 1"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="
+                  background-image: url('images/4.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(270deg)
+                    translate3d(-480px, 0px, 1440px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 1"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper swiper-cube swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress"
+            style="cursor: grab"
+          >
+            <div
+              class="swiper-wrapper"
+              style="
+                transform-origin: 50% 50% -240px;
+                transform: translate3d(0px, 0px, 0px) rotateX(0deg)
+                  rotateY(0deg);
+                --swiper-cube-translate-z: 0px;
+                transition-duration: 0ms;
+                transition-delay: 0ms;
+              "
+            >
+              <div
+                class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active"
+                style="
+                  background-image: url('images/1.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(0deg)
+                    translate3d(0px, 0px, 0px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 0"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+              <div
+                class="swiper-slide swiper-slide-next"
+                style="
+                  background-image: url('images/2.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(90deg)
+                    translate3d(0px, 0px, 0px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 1"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="
+                  background-image: url('images/3.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(180deg)
+                    translate3d(480px, 0px, 480px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 1"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="
+                  background-image: url('images/4.jpg');
+                  width: 480px;
+                  transform: rotateX(0deg) rotateY(270deg)
+                    translate3d(-480px, 0px, 1440px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-left"
+                  style="opacity: 1"
+                ></div>
+                <div
+                  class="swiper-slide-shadow-cube swiper-slide-shadow-right"
+                  style="opacity: 0"
+                ></div>
+              </div>
+              <div
+                class="swiper-cube-shadow"
+                style="
+                  height: 480px;
+                  transform: translate3d(0px, 260px, -240px) rotateX(89.99deg)
+                    rotateZ(0deg) scale(0.94);
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cloudflare Pages Analytics -->
+    <!-- <script
+      defer=""
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "292dac658aa34d589d3c0dab05bfcf61"}'
+    ></script> -->
+    <!-- Cloudflare Pages Analytics -->
+    <script crossorigin="" src="app/pointer.js"></script>
+  </body>
+</html>
