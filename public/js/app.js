@@ -10,18 +10,16 @@ form.addEventListener("submit", (e) => {
   weatherText.innerText = "Loading...";
   const location = input.value;
 
-  fetch(`http://localhost:3000/weather?address=${location}`).then(
-    (response) => {
-      response.json().then((data) => {
-        if (data.error) {
-          weatherText.innerText = data.error;
-        } else {
-          locationText.innerText = data.location;
-          mainContent.appendChild(locationText);
-          weatherText.innerText = data.forecast;
-          input.value = "";
-        }
-      });
-    }
-  );
+  fetch(`/weather?address=${location}`).then((response) => {
+    response.json().then((data) => {
+      if (data.error) {
+        weatherText.innerText = data.error;
+      } else {
+        locationText.innerText = data.location;
+        mainContent.appendChild(locationText);
+        weatherText.innerText = data.forecast;
+        input.value = "";
+      }
+    });
+  });
 });
