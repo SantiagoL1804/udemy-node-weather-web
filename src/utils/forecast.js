@@ -13,13 +13,14 @@ const forecast = (lat, lon, cb) => {
         temperature,
         feelslike,
         weather_descriptions: descriptions,
+        humidity,
       } = body.current;
       const [description] = descriptions;
-
+      console.log(humidity);
       cb(
         null,
         // { temperature, feelslike, description }
-        `${description}: It is currently ${temperature} degrees out, and it feels like ${feelslike} degrees out`
+        `${description}: It is currently ${temperature} degrees out, and it feels like ${feelslike} degrees out, with a humidity of ${humidity}.`
       );
     }
   });
